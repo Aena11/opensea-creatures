@@ -53,7 +53,7 @@ ACCESSORIES_NAMES = [a.replace('-', ' ').replace('.png', '')
 ACCESSORIES_ATTS_INT = [200, 11, 3, 41, 9, 172]
 ACCESSORIES_ATTS_PERCENT = [5, 10, 1, 20, 15, 25]
 ACCESSORIES_ATTS_LOCATION = ['Head', 'Body', 'Held', 'Held', 'Head', 'Held']
-ACCESSORIES_ATTS_RARITY = [
+ACCESSORIES_ATTS_RARITY = [    #🚗🚗🚗dv
     'Common',
     'Rare',
     'Legendary',
@@ -88,7 +88,7 @@ CONTRACT_URI_METADATA = {
         'external_link': 'https://github.com/ProjectOpenSea/opensea-erc1155/'
     }
 }
-CONTRACT_URI_METADATA_AVAILABLE = CONTRACT_URI_METADATA.keys()
+CONTRACT_URI_METADATA_AVAILABLE = CONTRACT_URI_METADATA.keys()#🚕🚓🚓gh
 
 
 ########################################################################
@@ -97,7 +97,7 @@ CONTRACT_URI_METADATA_AVAILABLE = CONTRACT_URI_METADATA.keys()
 
 # opensea-creatures
 
-@app.route('/api/creature/<token_id>')
+@app.route('/api/creature/<token_id>')#
 def creature(token_id):
     token_id = int(token_id)
     num_first_names = len(FIRST_NAMES)
@@ -196,6 +196,7 @@ def accessory(token_id):
     image_path = 'images/accessory/%s' % ACCESSORIES_IMAGES[token_id]
     image_url = _bucket_image(image_path, token_id, 'accessory')
     attributes = []
+    
     _add_attribute(attributes, 'Aqua Boost', ACCESSORIES_ATTS_INT, token_id, display_type='boost_number')
     _add_attribute(attributes, 'Stamina Increase', ACCESSORIES_ATTS_PERCENT, token_id, display_type='boost_percentage')
     _add_attribute(attributes, 'Location', ACCESSORIES_ATTS_LOCATION, token_id)
@@ -318,7 +319,7 @@ def _bucket_image(image_path, token_id, path='accessory'):
 
 
 def _get_bucket():
-    credentials = service_account.Credentials.from_service_account_file('credentials/google-storage-credentials.json')
+    credentials = service_account.Credentials.from_service_account_file('credentials/google-storage-credentials.json')#🚛🚛🚛ds
     if credentials.requires_scopes:
         credentials = credentials.with_scopes(['https://www.googleapis.com/auth/devstorage.read_write'])
     client = storage.Client(project=GOOGLE_STORAGE_PROJECT, credentials=credentials)

@@ -6,13 +6,13 @@ const MnemonicWalletSubprovider = require("@0x/subproviders")
 const RPCSubprovider = require("web3-provider-engine/subproviders/rpc");
 const Web3ProviderEngine = require("web3-provider-engine");
 
-const MNEMONIC = process.env.MNEMONIC;
-const NODE_API_KEY = process.env.INFURA_KEY || process.env.ALCHEMY_KEY;
+const MNEMONIC ="toilet trim stove art fine stadium midnight desk limit select industry despair";
+const NODE_API_KEY = "0VhpbiJB0TObsDdhhWcC6x_O98eknyer";
 const isInfura = !!process.env.INFURA_KEY;
-const FACTORY_CONTRACT_ADDRESS = process.env.FACTORY_CONTRACT_ADDRESS;
+const FACTORY_CONTRACT_ADDRESS = "0xD066e62a3aeacC6A6c981915Cd4d7a464F0Cc8e3";
 const NFT_CONTRACT_ADDRESS = process.env.NFT_CONTRACT_ADDRESS;
-const OWNER_ADDRESS = process.env.OWNER_ADDRESS;
-const NETWORK = process.env.NETWORK;
+const OWNER_ADDRESS = "0xFCE43634673135464be83fA925241DDDD416548e";
+const NETWORK = "rinkeby";
 const API_KEY = process.env.API_KEY || ""; // API key is optional but useful if you're doing a high volume of requests.
 
 if (!MNEMONIC || !NODE_API_KEY || !NETWORK || !OWNER_ADDRESS) {

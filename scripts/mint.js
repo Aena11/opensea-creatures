@@ -1,12 +1,12 @@
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const web3 = require("web3");
-const MNEMONIC = process.env.MNEMONIC;
-const NODE_API_KEY = process.env.INFURA_KEY || process.env.ALCHEMY_KEY;
+const MNEMONIC = "van chicken mixed present affair casino width bulk sad dinner finish puzzle";
+const NODE_API_KEY = "0VhpbiJB0TObsDdhhWcC6x_O98eknyer";
 const isInfura = !!process.env.INFURA_KEY;
 const FACTORY_CONTRACT_ADDRESS = process.env.FACTORY_CONTRACT_ADDRESS;
-const NFT_CONTRACT_ADDRESS = process.env.NFT_CONTRACT_ADDRESS;
-const OWNER_ADDRESS = process.env.OWNER_ADDRESS;
-const NETWORK = process.env.NETWORK;
+const NFT_CONTRACT_ADDRESS = "0xD066e62a3aeacC6A6c981915Cd4d7a464F0Cc8e3";
+const OWNER_ADDRESS ="0xFCE43634673135464be83fA925241DDDD416548e";
+const NETWORK = "rinkeby";
 const NUM_CREATURES = 12;
 const NUM_LOOTBOXES = 4;
 const DEFAULT_OPTION_ID = 0;
@@ -62,9 +62,7 @@ async function main() {
     NETWORK === "mainnet" || NETWORK === "live" ? "mainnet" : "rinkeby";
   const provider = new HDWalletProvider(
     MNEMONIC,
-    isInfura
-      ? "https://" + network + ".infura.io/v3/" + NODE_API_KEY
-      : "https://eth-" + network + ".alchemyapi.io/v2/" + NODE_API_KEY
+    "https://eth-" + network + ".alchemyapi.io/v2/" + NODE_API_KEY
   );
   const web3Instance = new web3(provider);
 
